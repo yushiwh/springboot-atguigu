@@ -26,8 +26,8 @@ public class Springboot04TaskApplicationTests {
 		message.setSubject("通知-今晚开会");
 		message.setText("今晚7:30开会");
 
-		message.setTo("17512080612@163.com");
-		message.setFrom("534096094@qq.com");
+		message.setTo("9******4@qq.com");
+		message.setFrom("y******h@126.com");
 
 		mailSender.send(message);
 	}
@@ -39,15 +39,15 @@ public class Springboot04TaskApplicationTests {
 		MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
 
 		//邮件设置
-		helper.setSubject("通知-今晚开会");
+		helper.setSubject("通知-今晚开会-测试一下邮件发送");
 		helper.setText("<b style='color:red'>今天 7:30 开会</b>",true);
 
-		helper.setTo("17512080612@163.com");
-		helper.setFrom("534096094@qq.com");
+		helper.setTo("2******0@qq.com");
+		helper.setFrom("y******h@126.com");
 
 		//上传文件
-		helper.addAttachment("1.jpg",new File("C:\\Users\\lfy\\Pictures\\Saved Pictures\\1.jpg"));
-		helper.addAttachment("2.jpg",new File("C:\\Users\\lfy\\Pictures\\Saved Pictures\\2.jpg"));
+		helper.addAttachment("1.jpg",new File("C:\\103第一学期课程表.jpg"));
+		helper.addAttachment("2.png",new File("C:\\1.png"));
 
 		mailSender.send(mimeMessage);
 
